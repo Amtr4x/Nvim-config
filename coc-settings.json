@@ -1,0 +1,22 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ],
+  "javascript.autoClosingTags" : true,
+  "typescript.autoClosingTags" : true,
+  "emmet.includeLanguages" : [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "codelens.enable" : false
+}
