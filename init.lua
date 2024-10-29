@@ -54,6 +54,9 @@ vim.cmd('set tabstop=2')
 vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')
 
+-- spell check
+vim.cmd('setlocal spell spelllang=en_us')
+
 -- color support
 vim.cmd('set t_Co=256')
 
