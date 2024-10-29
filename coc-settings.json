@@ -18,5 +18,8 @@
     "typescriptreact",
     "html"
   ],
-  "codelens.enable" : false
+  "codelens.enable" : false,
+  "bashIde.shfmt.simplifycode" : true,
+  "bashIde.explainshellEndpoint" : true,
+  "bashIde.enableSourceErrorDiagnostics" : true
 }
