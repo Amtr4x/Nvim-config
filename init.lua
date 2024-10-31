@@ -26,6 +26,9 @@ Plug('preservim/nerdtree')
 Plug('plasticboy/vim-markdown')
 -- highlight the git changes in the file
 Plug('airblade/vim-gitgutter')
+-- fuzzy search
+Plug('nvim-lua/plenary.nvim')
+Plug('nvim-telescope/telescope.nvim', {['tag'] = '0.1.8', ['branch'] = '0.1.x'})
 
 vim.call('plug#end')
 
@@ -42,8 +45,7 @@ vim.cmd('set ttimeoutlen=0')
 vim.cmd('set clipboard+=unnamedplus')
 vim.cmd('set hidden')
 vim.cmd('set inccommand=split')
---vim.cmd('set completeopt=noinsert,menuone,noselect')
-vim.opt.completeopt = 'menuone,noinsert,noselect'
+
 
 -- tab size
 vim.cmd('set expandtab')
@@ -101,3 +103,8 @@ keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 -- Use <c-space> to trigger completion
 keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+
+-- TELESCOPE configuration
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<C-s>', telescope.find_files, { desc = 'Telescope find files' })
+
